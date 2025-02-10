@@ -1,0 +1,45 @@
+<div>
+  <h1>Todo App</h1>
+  <div>
+    <input [(ngModel)]="newTodo.title" placeholder="Enter todo" />
+    <select [(ngModel)]="newTodo.category">
+      <option value="All">All</option>
+      <option value="Office">Office</option>
+      <option value="Home">Home</option>
+      <option value="Self">Self</option>
+    </select>
+    <button (click)="addTodo()">Add Todo</button>
+  </div>
+
+  <!-- Filter Buttons -->
+  <div>
+    <button (click)="filterTodosByCategory('All')">All</button>
+    <button (click)="filterTodosByCategory('Office')">Office</button>
+    <button (click)="filterTodosByCategory('Home')">Home</button>
+    <button (click)="filterTodosByCategory('Self')">Self</button>
+  </div>
+
+  <!-- Todo List -->
+  <ul>
+    <li *ngFor="let todo of filteredTodos">
+      <div *ngIf="editTodoId !== todo._id">
+        {{ todo.title }} ({{ todo.category }})
+        <button (click)="enterEditMode(todo)">Edit</button>
+        <button (click)="deleteTodo(todo._id)">Delete</button>
+      </div>
+
+      <!-- Edit Mode -->
+      <div *ngIf="editTodoId === todo._id">
+        <input [(ngModel)]="updatedTitle" placeholder="Enter updated title" />
+        <select [(ngModel)]="updatedCategory">
+          <option value="All">All</option>
+          <option value="Office">Office</option>
+          <option value="Home">Home</option>
+          <option value="Self">Self</option>
+        </select>
+        <button (click)="saveUpdatedTodo(todo._id)">Save</button>
+        <button (click)="editTodoId = null">Cancel</button>
+      </div>
+    </li>
+  </ul>
+</div>

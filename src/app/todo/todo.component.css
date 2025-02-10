@@ -1,0 +1,90 @@
+/* Main container styling */
+div {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Input and select box styling */
+  input, select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Filter buttons styling */
+  div button {
+    margin: 5px;
+    background-color: #28a745;
+  }
+  
+  div button:hover {
+    background-color: #218838;
+  }
+  
+  /* Todo list styling */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Edit mode styling */
+  input[type="text"], select {
+    margin-right: 10px;
+  }
+  
+  /* Save and Cancel buttons in edit mode */
+  button.save {
+    background-color: #17a2b8;
+  }
+  
+  button.save:hover {
+    background-color: #138496;
+  }
+  
+  button.cancel {
+    background-color: #dc3545;
+  }
+  
+  button.cancel:hover {
+    background-color: #c82333;
+  }
